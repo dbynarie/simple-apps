@@ -6,7 +6,7 @@ services:
     restart: always
     env_file: ./apps/.env
     volumes:
-      - myapp:/app
-volumes:
-  myapp:
-    external: true
+      - /opt/jenkins/workspace/freestyle-job-simpleapps/simple-apps:/app
+#volumes:
+#  myapp:
+#    external: true
