@@ -4,13 +4,11 @@ FROM node:18.16
 # WORKDIR
 WORKDIR /app
 
-# PERINTAH YANG DIJALANKAN PADA SAAT PEMBUATAN IMAGE
-RUN apt update -y 
-
 # COPY FILE TO IMAGE
 ADD . /app
 
-RUN npm install
+# PERINTAH YANG DIJALANKAN PADA SAAT PEMBUATAN IMAGE
+RUN apt update -y  && npm install
 
 # MAINTAINER IMAGE
 LABEL email="deni@idn.id"
