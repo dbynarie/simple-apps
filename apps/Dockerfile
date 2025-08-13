@@ -7,6 +7,9 @@ RUN apt update -y && npm install
 # COPY FILE TO IMAGE
 ADD . /app
 
+# MAINTAINER IMAGE
+LABEL email="deni@idn.id"
+
 # PERINTAH YANG DIJALANKAN PADA SAAT CONTAINER SUDAH UP
 CMD ["npm", "start"]
 
