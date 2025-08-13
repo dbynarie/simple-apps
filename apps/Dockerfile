@@ -2,10 +2,12 @@
 FROM node:18.16
 
 # PERINTAH YANG DIJALANKAN PADA SAAT PEMBUATAN IMAGE
-RUN apt update -y && cd apps && npm install
+RUN apt update -y 
 
 # COPY FILE TO IMAGE
 ADD . /app
+
+RUN npm install
 
 # MAINTAINER IMAGE
 LABEL email="deni@idn.id"
