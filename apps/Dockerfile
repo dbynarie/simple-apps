@@ -1,8 +1,8 @@
 # MENENTUKAN IMAGE
 FROM node:18.16
 
-# PERINTAH YANG DIJALANKAN
-RUN apt update -y && npm install
+# PERINTAH YANG DIJALANKAN PADA SAAT PEMBUATAN IMAGE
+RUN apt update -y && cd apps && npm install
 
 # COPY FILE TO IMAGE
 ADD . /app
